@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Accordion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <p class="eyebrow">Help Center</p>
+      <h1>Frequently Asked Questions</h1>
+      <p class="hint">Web development basics. Click a question to open its answer.</p>
+    </header>
+
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Search questions..." autocomplete="off" aria-label="Search questions">
+      <div class="tool-buttons">
+        <button type="button" id="expand-all" class="secondary">Expand all</button>
+        <button type="button" id="collapse-all" class="secondary">Collapse all</button>
+      </div>
+    </div>
+
+    <div class="status-row">
+      <label class="switch">
+        <input type="checkbox" id="multiple">
+        <span class="slider" aria-hidden="true"></span>
+        <span>Keep multiple answers open</span>
+      </label>
+      <p id="status" class="status" aria-live="polite"></p>
+    </div>
+
+    <section class="faq-list" id="faq-list">
+      <article class="faq-item">
+        <h2 class="faq-heading">
+          <button class="faq-question" type="button" id="q1" aria-expanded="false" aria-controls="a1">
+            <span class="num">01</span>
+            <span class="q-text">What is HTML?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+        </h2>
+        <div class="answer-wrap" id="a1" role="region" aria-labelledby="q1">
+          <div class="answer"><p>HTML (HyperText Markup Language) is the language that gives a web page its structure. It uses tags like <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code> and <code>&lt;button&gt;</code> to describe headings, paragraphs, buttons and other content.</p></div>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <h2 class="faq-heading">
+          <button class="faq-question" type="button" id="q2" aria-expanded="false" aria-controls="a2">
+            <span class="num">02</span>
+            <span class="q-text">What is CSS and why do we use it?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+        </h2>
+        <div class="answer-wrap" id="a2" role="region" aria-labelledby="q2">
+          <div class="answer"><p>CSS (Cascading Style Sheets) controls how a page looks: colours, fonts, spacing and layout. Keeping CSS in a separate file means you can change the design without touching the content.</p></div>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <h2 class="faq-heading">
+          <button class="faq-question" type="button" id="q3" aria-expanded="false" aria-controls="a3">
+            <span class="num">03</span>
+            <span class="q-text">What does JavaScript do on a web page?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+        </h2>
+        <div class="answer-wrap" id="a3" role="region" aria-labelledby="q3">
+          <div class="answer"><p>JavaScript makes a page interactive. It can respond to clicks, change text and styles, validate forms, and update the page without reloading it. This accordion is built with JavaScript.</p></div>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <h2 class="faq-heading">
+          <button class="faq-question" type="button" id="q4" aria-expanded="false" aria-controls="a4">
+            <span class="num">04</span>
+            <span class="q-text">What is responsive design?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+        </h2>
+        <div class="answer-wrap" id="a4" role="region" aria-labelledby="q4">
+          <div class="answer"><p>Responsive design means a website adjusts to any screen size, from phones to large monitors. It uses flexible layouts, relative units and CSS media queries.</p></div>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <h2 class="faq-heading">
+          <button class="faq-question" type="button" id="q5" aria-expanded="false" aria-controls="a5">
+            <span class="num">05</span>
+            <span class="q-text">What is the DOM?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+        </h2>
+        <div class="answer-wrap" id="a5" role="region" aria-labelledby="q5">
+          <div class="answer"><p>The DOM (Document Object Model) is the browser's tree-like version of your HTML page. JavaScript uses it to find elements, such as with <code>document.querySelector()</code>, and to change them.</p></div>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <h2 class="faq-heading">
+          <button class="faq-question" type="button" id="q6" aria-expanded="false" aria-controls="a6">
+            <span class="num">06</span>
+            <span class="q-text">What is an event listener?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+        </h2>
+        <div class="answer-wrap" id="a6" role="region" aria-labelledby="q6">
+          <div class="answer"><p>An event listener waits for something to happen, like a click or a key press, and then runs a function. You add one with <code>element.addEventListener('click', myFunction)</code>.</p></div>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <h2 class="faq-heading">
+          <button class="faq-question" type="button" id="q7" aria-expanded="false" aria-controls="a7">
+            <span class="num">07</span>
+            <span class="q-text">What is the difference between let, const and var?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+        </h2>
+        <div class="answer-wrap" id="a7" role="region" aria-labelledby="q7">
+          <div class="answer"><p><code>let</code> declares a variable that can change, and <code>const</code> declares one that cannot be reassigned. Both are block-scoped. <code>var</code> is the older style and is function-scoped, so most developers now prefer <code>let</code> and <code>const</code>.</p></div>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <h2 class="faq-heading">
+          <button class="faq-question" type="button" id="q8" aria-expanded="false" aria-controls="a8">
+            <span class="num">08</span>
+            <span class="q-text">What is Git and why should I use GitHub?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+        </h2>
+        <div class="answer-wrap" id="a8" role="region" aria-labelledby="q8">
+          <div class="answer"><p>Git tracks changes to your code so you can go back to earlier versions. GitHub stores your Git projects online, which helps you back up your work, share it, and show it to employers.</p></div>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <h2 class="faq-heading">
+          <button class="faq-question" type="button" id="q9" aria-expanded="false" aria-controls="a9">
+            <span class="num">09</span>
+            <span class="q-text">How can I host my website for free?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+        </h2>
+        <div class="answer-wrap" id="a9" role="region" aria-labelledby="q9">
+          <div class="answer"><p>GitHub Pages is a simple option. Upload your project to a repository, open Settings, choose Pages, and select your main branch. GitHub then gives you a live link to share.</p></div>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <h2 class="faq-heading">
+          <button class="faq-question" type="button" id="q10" aria-expanded="false" aria-controls="a10">
+            <span class="num">10</span>
+            <span class="q-text">How can I get better at web development?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+        </h2>
+        <div class="answer-wrap" id="a10" role="region" aria-labelledby="q10">
+          <div class="answer"><p>Build small projects regularly, read the MDN documentation, and fix bugs yourself before looking for answers. Share your work and ask for feedback, because practice and feedback help the most.</p></div>
+        </div>
+      </article>
+    </section>
+
+    <p id="no-results" class="no-results" hidden>No questions match your search. Try a different word.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
